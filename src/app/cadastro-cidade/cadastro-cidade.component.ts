@@ -1,4 +1,4 @@
-import { Component,OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component,OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CidadeService } from '../service/cidade.service';
 export interface Cidade{
@@ -11,7 +11,7 @@ export interface Cidade{
   templateUrl: './cadastro-cidade.component.html',
   styleUrls: ['./cadastro-cidade.component.css']
 })
-export class CadastroCidadeComponent implements OnInit {
+export class CadastroCidadeComponent implements OnInit, AfterViewInit {
 
   public nome:string = '';
   public estado:string = '';
@@ -22,6 +22,12 @@ export class CadastroCidadeComponent implements OnInit {
     public actived_route:ActivatedRoute,
     public cidade_service:CidadeService
   ){}
+
+  ngAfterViewInit(): void {
+    setTimeout(()=>{
+      this.lista_estado.setEstado('PR');
+    });
+  }
 
   
   ngOnInit(): void {
