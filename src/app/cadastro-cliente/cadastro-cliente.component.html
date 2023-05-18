@@ -22,15 +22,7 @@
         >
     </div> 
     <div class="mb-3">
-      <label for="cidade" class="form-label">Cidade:</label>
-      <input 
-        type="text" 
-        class="form-control" 
-        id="cidade" 
-        aria-describedby="Cidade do cliente"
-        [(ngModel)]="cidade"
-        name="cidade"
-      >
+      <app-listar-cidade #lista_cidade_component > </app-listar-cidade>
   </div>  
     <button 
       type="button" 

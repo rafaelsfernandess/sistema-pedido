@@ -1,0 +1,7 @@
+<label for="cidade" class="form-label">Cidades:</label>
+
+<select class="form-select" [(ngModel)]="cidade" name="cidade" aria-label="Lista de cidades">
+    
+    <option *ngFor="let cidade of cidade_service.carregar()" value="{{ cidade.nome }}">{{ cidade.nome }}</option>
+
+</select>

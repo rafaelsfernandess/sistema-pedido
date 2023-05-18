@@ -56,8 +56,6 @@ export class CadastroClienteComponent implements OnInit{
     this.limpar();
   }
 
-  
-
   limpar(){
     this.nome   = '';
     this.cpf  = '';

@@ -25,7 +25,11 @@ export class CadastroCidadeComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     setTimeout(()=>{
-      this.lista_estado.setEstado('PR');
+      if(this.indice < 0){
+        this.lista_estado.setEstado('SC');
+      }else{
+      this.lista_estado.setEstado(this.estado)}
+
     });
   }
 
@@ -39,10 +43,12 @@ export class CadastroCidadeComponent implements OnInit, AfterViewInit {
         let cidade = this.cidade_service.registro(this.indice);
         this.nome   = cidade.nome;
         this.estado  = cidade.estado;
+
       }
     });
     
   }
+  
   salvar(){
     let cidade:Cidade = {
       nome:this.nome,
