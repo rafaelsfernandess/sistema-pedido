@@ -18,6 +18,8 @@ import { CadastroClienteComponent } from './cadastro-cliente/cadastro-cliente.co
 import { ListarClienteComponent } from './listar-cliente/listar-cliente.component';
 import { ListaCidadeComponent } from './lista-cidade/lista-cidade.component';
 import { ListarCidadeComponent } from './listar-cidade/listar-cidade.component';
+import { VendaComponent } from './venda/venda.component';
+import { FiltroProdutoComponent } from './filtro-produto/filtro-produto.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { ListarCidadeComponent } from './listar-cidade/listar-cidade.component';
     CadastroClienteComponent,
     ListarClienteComponent,
     ListaCidadeComponent,
-    ListarCidadeComponent
+    ListarCidadeComponent,
+    VendaComponent,
+    FiltroProdutoComponent
   ],
   imports: [
     BrowserModule,
